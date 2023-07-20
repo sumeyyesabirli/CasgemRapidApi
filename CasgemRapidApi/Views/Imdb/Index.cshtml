@@ -1,0 +1,28 @@
+﻿@model List<ImdMovieListViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container">
+    <br /><br />
+    <table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Film Adı</th>
+        <th>Film Puanı</th>
+        <th>Yapım Yılı</th>
+    </tr>
+    @foreach (var item in Model)
+        {
+          <tr>
+                <td>@item.rank</td>
+                <td>@item.title</td>
+                <td>@item.rating</td>
+                <td>@item.year</td>
+          </tr>
+        }
+    </table>
+
+</div>
+
